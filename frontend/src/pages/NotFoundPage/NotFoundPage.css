@@ -1,0 +1,21 @@
+.not-found-container {
+    text-align: center;
+}
+
+.not-found-title {
+    font-size: 8rem;
+    /* Adjust font size to make it larger */
+    color: #f44336;
+    /* Red color */
+    margin-bottom: 20px;
+}
+
+.not-found-message {
+    font-size: 2rem;
+    /* Adjust font size to make it larger */
+    margin-bottom: 20px;
+}
+
+.not-found-button {
+    margin-top: 20px;
+}
