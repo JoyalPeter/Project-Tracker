@@ -1,0 +1,35 @@
+.add-todo-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 25rem;
+    background-color: white; 
+    border: 0.125rem solid #000;
+    box-shadow: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.625rem;
+}
+
+.add-todo-modal-title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.add-todo-modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.add-todo-modal-status{
+    text-align: center;
+    font-weight: bold;
+}
+
+.add-todo-modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}

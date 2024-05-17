@@ -1,0 +1,25 @@
+.delete-todo-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 25rem;
+    background-color: white; 
+    border: 0.125rem solid #000;
+    box-shadow: 1.5rem;
+    padding: 1rem;
+    border-radius: 0.625rem;
+}
+
+.delete-todo-modal-title {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.delete-todo-modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
