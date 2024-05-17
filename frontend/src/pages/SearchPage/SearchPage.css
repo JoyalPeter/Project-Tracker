@@ -1,0 +1,16 @@
+.search-page-container {
+    width: 100%;
+    max-width: 40rem;
+    margin: 2rem auto 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-page-search-bar {
+    flex: 1;
+}
+
+.search-page-search-button {
+    height: 3.5rem;
+}
