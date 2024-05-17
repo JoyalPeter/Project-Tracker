@@ -1,0 +1,34 @@
+.project-page-project-card {
+  margin: 0 auto;
+  margin-top: 2%;
+  min-width: 30%;
+  max-width: 90%;
+}
+
+.project-page-project-card-content   {
+  display: flex;
+  flex-direction: column;
+  column-gap:1%
+}
+
+.project-page-project-card-title {
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-page-project-card-created {
+  margin-bottom: 1%;
+}
+
+.project-page-project-card-buttons{
+  margin-bottom: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1%
+}
+
+.todos {
+  margin-top: 20px;
+}
