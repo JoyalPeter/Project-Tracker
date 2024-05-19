@@ -1,21 +1,21 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
-import Toaster from "./components/Toaster/Toaster";
-import PrivateRoutes from "./utils/PrivateRoutes";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Loader from "./components/Loader/Loader";
+import PrivateRoutes from "./utils/PrivateRoutes";
+import Toaster from "./components/Toaster/Toaster";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
-const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage"));
 const SignIn = lazy(() => import("./pages/SignIn/SignIn"));
 const SignUp = lazy(() => import("./pages/SignUp/SignUp"));
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const SearchPage = lazy(() => import("./pages/SearchPage/SearchPage"));
 const ProjectPage = lazy(() => import("./pages/ProjectPage/ProjectPage"));
+const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage"));
 const AllProjectsPage = lazy(() =>
   import("./pages/AllProjectsPage/AllProjectsPage")
 );
 
-const darkTheme = createTheme({
+const theme = createTheme({
   palette: {
     mode: "light",
   },
@@ -24,9 +24,9 @@ const darkTheme = createTheme({
 function App() {
   return (
     <>
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={theme}>
         <BrowserRouter>
-          <Suspense fallback={<Loader />}>
+          <Suspense fallback={<Loader open={true}/>}>
             <Routes>
               <Route path="/signin" Component={SignIn} />
               <Route path="/signup" Component={SignUp} />
