@@ -72,12 +72,21 @@ export default function ExportGist({ projectTitle, todos, open, setOpen }) {
           },
           public: false,
         }),
-      }).then((_) => {
-        const fileBlob = new Blob([markDownFileContent], {
-          type: "text/markdown",
-        });
-        saveAs(fileBlob, markdownfileName);
-        toast.success(ToasterMessages.EXPORT_N_SAVE_SUCCESS);
+      }).then(async (response) => {
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(
+            `${response.status || "Unknown status"}: ${
+              errorData.message || "Unknown error"
+            }`
+          );
+        } else {
+          const fileBlob = new Blob([markDownFileContent], {
+            type: "text/markdown",
+          });
+          saveAs(fileBlob, markdownfileName);
+          toast.success(ToasterMessages.EXPORT_N_SAVE_SUCCESS);
+        }
       });
     } catch (error) {
       console.error("Error exporting gist:\n", error);
