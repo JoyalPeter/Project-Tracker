@@ -7,24 +7,33 @@ import HomeIcon from "@mui/icons-material/Home";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import LogoutIcon from "@mui/icons-material/Logout";
-import { useState } from "react";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
+import { Tooltip, useTheme } from "@mui/material";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ColorModeContext } from "../../utils/ColorTheme";
 
 export default function NavBar() {
   const navigate = useNavigate();
+  const theme = useTheme();
+  const colorMode = useContext(ColorModeContext);
   const [openLogout, setOpenLogout] = useState(false);
   return (
     <>
       <Box sx={{ flexGrow: 1, marginBottom: "2%" }}>
         <AppBar position="static">
           <Toolbar>
-            <IconButton
-              edge="start"
-              data-testid="test-navbar-home"
-              onClick={() => navigate("/")}
-            >
-              <HomeIcon />
-            </IconButton>
+            <Tooltip title="Home">
+              <IconButton
+                edge="start"
+                color="inherit"
+                data-testid="test-navbar-home"
+                onClick={() => navigate("/")}
+              >
+                <HomeIcon />
+              </IconButton>
+            </Tooltip>
             <Typography
               align="center"
               variant="h5"
@@ -33,7 +42,19 @@ export default function NavBar() {
             >
               Take Home Challenge
             </Typography>
-
+            <Tooltip title="Change mode">
+              <IconButton
+                sx={{ ml: 1 }}
+                onClick={colorMode.toggleColorMode}
+                color="inherit"
+              >
+                {theme.palette.mode === "dark" ? (
+                  <Brightness7Icon />
+                ) : (
+                  <Brightness4Icon />
+                )}
+              </IconButton>
+            </Tooltip>
             <Button
               color="inherit"
               data-testid="test-navbar-logout"

@@ -64,6 +64,7 @@ export default function TodoComponent({ todo, updated, setUpdated }) {
         <TableCell align="center">
           <Box sx={{ gap: "1%" }}>
             <IconButton
+              color="inherit"
               data-testid="test-todo-component-row-edit-btn"
               onClick={() => {
                 setOpenEditModal(true);
@@ -72,6 +73,7 @@ export default function TodoComponent({ todo, updated, setUpdated }) {
               <EditIcon />
             </IconButton>
             <IconButton
+              color="inherit"
               data-testid="test-todo-component-row-delete-btn"
               onClick={() => {
                 setOpenDeleteModal(true);

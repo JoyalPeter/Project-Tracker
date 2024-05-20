@@ -57,7 +57,10 @@ export default function EditTodo({
   return (
     <>
       <Modal open={open} onClose={handleClose} data-testid="test-edit-todo">
-        <Box className="edit-todo-modal" sx={{ marginBottom: "1rem" }}>
+        <Box
+          className="edit-todo-modal"
+          sx={{ marginBottom: "1rem", backgroundColor: "background.paper" }}
+        >
           <Typography
             variant="h6"
             component="h2"

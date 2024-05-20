@@ -50,7 +50,10 @@ export default function CreateProject({ open, setOpen }) {
         onClose={handleClose}
         data-testid="test-create-project"
       >
-        <Box className="create-project-modal">
+        <Box
+          className="create-project-modal"
+          sx={{ backgroundColor: "background.paper" }}
+        >
           <Typography variant="h6" component="h2" align="center">
             Enter Project Title
           </Typography>

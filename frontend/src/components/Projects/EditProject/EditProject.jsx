@@ -55,7 +55,10 @@ export default function EditProject({
   return (
     <>
       <Modal open={open} onClose={handleClose} data-testid="test-edit-project">
-        <Box className="edit-project-modal">
+        <Box
+          className="edit-project-modal"
+          sx={{ backgroundColor: "background.paper" }}
+        >
           <Typography
             variant="h6"
             component="h2"
@@ -76,7 +79,7 @@ export default function EditProject({
             <Button
               variant="contained"
               data-testid="test-edit-project-save-btn"
-              disabled={title === ""}
+              disabled={title === "" || title === currentTitle}
               onClick={handleEdit}
             >
               Save

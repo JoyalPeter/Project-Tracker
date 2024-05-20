@@ -60,7 +60,10 @@ export default function AddTodo({
   return (
     <>
       <Modal open={open} onClose={handleClose} data-testid="test-add-todo">
-        <Box className="add-todo-modal">
+        <Box
+          className="add-todo-modal"
+          sx={{ backgroundColor: "background.paper" }}
+        >
           <Typography
             className="add-todo-modal-title"
             variant="h6"

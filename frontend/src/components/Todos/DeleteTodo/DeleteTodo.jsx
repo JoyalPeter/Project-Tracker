@@ -44,7 +44,10 @@ export default function DeleteTodo({
   return (
     <>
       <Modal open={open} onClose={handleClose} data-testid="test-delete-todo">
-        <Box className="delete-todo-modal">
+        <Box
+          className="delete-todo-modal"
+          sx={{ backgroundColor: "background.paper" }}
+        >
           <Typography
             className="delete-todo-modal-title"
             variant="h6"

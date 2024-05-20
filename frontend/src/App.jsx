@@ -1,10 +1,11 @@
-import { Suspense, lazy } from "react";
-import Loader from "./components/Loader/Loader";
 import PrivateRoutes from "./utils/PrivateRoutes";
 import Toaster from "./components/Toaster/Toaster";
+import CssBaseline from "@mui/material/CssBaseline";
+import { Suspense, lazy } from "react";
+import { ColorTheme } from "./utils/ColorTheme";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
 
+import Loader from "./components/Loader/Loader";
 const SignIn = lazy(() => import("./pages/SignIn/SignIn"));
 const SignUp = lazy(() => import("./pages/SignUp/SignUp"));
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
@@ -15,18 +16,13 @@ const AllProjectsPage = lazy(() =>
   import("./pages/AllProjectsPage/AllProjectsPage")
 );
 
-const theme = createTheme({
-  palette: {
-    mode: "light",
-  },
-});
-
 function App() {
   return (
     <>
-      <ThemeProvider theme={theme}>
+      <ColorTheme>
+        <CssBaseline />
         <BrowserRouter>
-          <Suspense fallback={<Loader open={true}/>}>
+          <Suspense fallback={<Loader open={true} />}>
             <Routes>
               <Route path="/signin" Component={SignIn} />
               <Route path="/signup" Component={SignUp} />
@@ -41,7 +37,7 @@ function App() {
           </Suspense>
         </BrowserRouter>
         <Toaster />
-      </ThemeProvider>
+      </ColorTheme>
     </>
   );
 }
