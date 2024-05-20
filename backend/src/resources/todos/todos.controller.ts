@@ -8,12 +8,12 @@ import {
   Delete,
   UseGuards,
 } from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
 import { TodosService } from './todos.service';
+import { ApiBearerAuth } from '@nestjs/swagger';
 import { CreateTodoDto } from './dto/create-todo.dto';
 import { UpdateTodoDto } from './dto/update-todo.dto';
 import { ProjectsService } from '../projects/projects.service';
-import { ApiBearerAuth } from '@nestjs/swagger';
-import { AuthGuard } from '@nestjs/passport';
 
 @Controller('todos')
 export class TodosController {

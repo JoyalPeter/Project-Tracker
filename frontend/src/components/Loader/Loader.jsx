@@ -1,6 +1,6 @@
+import PropTypes from "prop-types";
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
-import PropTypes from "prop-types";
 
 export default function Loader({ open }) {
   return (

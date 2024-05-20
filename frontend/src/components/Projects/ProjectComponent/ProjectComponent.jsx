@@ -1,15 +1,17 @@
-import { useNavigate } from "react-router-dom";
-import Empty from "../../Empty/Empty";
+import PropTypes from "prop-types";
 import Table from "@mui/material/Table";
+import Paper from "@mui/material/Paper";
+import Button from "@mui/material/Button";
+import TableRow from "@mui/material/TableRow";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
-import { Button, Typography } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import TableContainer from "@mui/material/TableContainer";
 import VisibilityIcon from "@mui/icons-material/Visibility";
-import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
+
+import Empty from "../../Empty/Empty";
 
 export default function ProjectComponent({ projects, heading }) {
   const navigate = useNavigate();

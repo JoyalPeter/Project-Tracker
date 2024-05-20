@@ -1,6 +1,7 @@
-import { Typography, Box } from "@mui/material";
-import InfoIcon from "@mui/icons-material/Info";
 import PropTypes from "prop-types";
+import Box from "@mui/material/Box";
+import InfoIcon from "@mui/icons-material/Info";
+import Typography from "@mui/material/Typography";
 import "./Empty.css";
 
 export default function Empty({ message }) {

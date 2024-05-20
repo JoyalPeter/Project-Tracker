@@ -1,14 +1,14 @@
-import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import Logout from "../Logout/Logout";
-import { useState } from "react";
-import { IconButton } from "@mui/material";
-import { useNavigate } from "react-router-dom";
-import LogoutIcon from "@mui/icons-material/Logout";
+import AppBar from "@mui/material/AppBar";
+import Button from "@mui/material/Button";
+import Toolbar from "@mui/material/Toolbar";
 import HomeIcon from "@mui/icons-material/Home";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import LogoutIcon from "@mui/icons-material/Logout";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function NavBar() {
   const navigate = useNavigate();
@@ -18,7 +18,11 @@ export default function NavBar() {
       <Box sx={{ flexGrow: 1, marginBottom: "2%" }}>
         <AppBar position="static">
           <Toolbar>
-            <IconButton edge="start" data-testid="test-navbar-home" onClick={() => navigate("/")}>
+            <IconButton
+              edge="start"
+              data-testid="test-navbar-home"
+              onClick={() => navigate("/")}
+            >
               <HomeIcon />
             </IconButton>
             <Typography

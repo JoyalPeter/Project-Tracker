@@ -1,14 +1,17 @@
-import { Button, Modal, TextField } from "@mui/material";
+import PropTypes from "prop-types";
 import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import makeApiCall from "../../../utils/ApiCall";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import makeApiCall from "../../../utils/ApiCall";
-import Loader from "../../Loader/Loader";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 import { Api_Methods, ToasterMessages } from "../../../utils/Constants";
-import PropTypes from "prop-types";
 import "./CreateProject.css";
+
+import Loader from "../../Loader/Loader";
 
 export default function CreateProject({ open, setOpen }) {
   const navigate = useNavigate();

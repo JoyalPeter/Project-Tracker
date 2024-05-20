@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
 import makeApiCall from "../../utils/ApiCall";
-import Loader from "../../components/Loader/Loader";
 import { toast } from "react-toastify";
+import { useEffect, useState } from "react";
 import { Api_Methods, ToasterMessages } from "../../utils/Constants";
+
 import NavBar from "../../components/NavBar/NavBar";
+import Loader from "../../components/Loader/Loader";
 import ProjectComponent from "../../components/Projects/ProjectComponent/ProjectComponent";
 
 export default function AllProjectsPage() {

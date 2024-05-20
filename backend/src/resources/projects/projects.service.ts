@@ -1,11 +1,11 @@
-import { Injectable } from '@nestjs/common';
-import { CreateProjectDto } from './dto/create-project.dto';
-import { UpdateProjectDto } from './dto/update-project.dto';
-import { InjectRepository } from '@nestjs/typeorm';
 import { Like, Repository } from 'typeorm';
+import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
 import { Project } from './entities/project.entity';
 import { User } from '../users/entities/user.entity';
 import { TodosService } from '../todos/todos.service';
+import { CreateProjectDto } from './dto/create-project.dto';
+import { UpdateProjectDto } from './dto/update-project.dto';
 
 @Injectable()
 export class ProjectsService {
@@ -78,7 +78,7 @@ export class ProjectsService {
 
   async remove(id: string) {
     try {
-      const project = await this.findOne(id)
+      const project = await this.findOne(id);
 
       project.todos.forEach(async (todo) => {
         await this.todoService.remove(todo.todoID);

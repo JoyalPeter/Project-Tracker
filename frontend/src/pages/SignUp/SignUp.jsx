@@ -1,28 +1,29 @@
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import CssBaseline from "@mui/material/CssBaseline";
-import TextField from "@mui/material/TextField";
+import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-import Typography from "@mui/material/Typography";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
+import makeApiCall from "../../utils/ApiCall";
 import Container from "@mui/material/Container";
-import { useNavigate } from "react-router-dom";
-import Loader from "../../components/Loader/Loader";
+import TextField from "@mui/material/TextField";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import CssBaseline from "@mui/material/CssBaseline";
+import Visibility from "@mui/icons-material/Visibility";
+import InputAdornment from "@mui/material/InputAdornment";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { toast } from "react-toastify";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Api_Methods,
   PasswordRegex,
   ToasterMessages,
 } from "../../utils/Constants";
-import makeApiCall from "../../utils/ApiCall";
-import { useEffect, useState } from "react";
-import { Tooltip } from "@mui/material";
-import { InputAdornment } from "@mui/material";
-import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import Visibility from "@mui/icons-material/Visibility";
-import IconButton from "@mui/material/IconButton";
+
+import Loader from "../../components/Loader/Loader";
 
 export default function SignUp() {
   const [loading, setLoading] = useState(false);

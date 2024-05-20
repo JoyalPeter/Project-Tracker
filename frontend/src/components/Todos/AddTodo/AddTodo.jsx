@@ -1,22 +1,21 @@
-import {
-  Button,
-  FormControl,
-  InputLabel,
-  Modal,
-  TextField,
-} from "@mui/material";
+import PropTypes from "prop-types";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import { useState } from "react";
+import Modal from "@mui/material/Modal";
+import Button from "@mui/material/Button";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
+import TextField from "@mui/material/TextField";
 import makeApiCall from "../../../utils/ApiCall";
-import { Api_Methods, Status } from "../../../utils/Constants";
-import Loader from "../../Loader/Loader";
+import InputLabel from "@mui/material/InputLabel";
+import Typography from "@mui/material/Typography";
+import FormControl from "@mui/material/FormControl";
+import { useState } from "react";
 import { toast } from "react-toastify";
 import { ToasterMessages } from "../../../utils/Constants";
+import { Api_Methods, Status } from "../../../utils/Constants";
 import "./AddTodo.css";
-import PropTypes from "prop-types";
+
+import Loader from "../../Loader/Loader";
 
 export default function AddTodo({
   projectID,

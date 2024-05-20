@@ -1,5 +1,5 @@
-import { IsEnum, IsNotEmpty, IsString } from 'class-validator';
 import { Status } from '../../../utils/Constants';
+import { IsEnum, IsNotEmpty, IsString } from 'class-validator';
 
 export class CreateTodoDto {
   @IsNotEmpty()

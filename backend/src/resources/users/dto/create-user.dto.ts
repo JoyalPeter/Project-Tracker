@@ -1,5 +1,5 @@
-import { IsNotEmpty, IsString, IsStrongPassword } from 'class-validator';
 import { ErrorMessages } from '../../../utils/Constants';
+import { IsNotEmpty, IsString, IsStrongPassword } from 'class-validator';
 
 export class CreateUserDto {
   @IsNotEmpty()

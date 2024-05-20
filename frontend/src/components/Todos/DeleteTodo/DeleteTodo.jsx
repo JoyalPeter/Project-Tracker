@@ -1,13 +1,15 @@
-import { Button, Modal } from "@mui/material";
+import PropTypes from "prop-types";
 import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+import Button from "@mui/material/Button";
+import makeApiCall from "../../../utils/ApiCall";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
-import Loader from "../../Loader/Loader";
 import { toast } from "react-toastify";
 import { Api_Methods, ToasterMessages } from "../../../utils/Constants";
-import makeApiCall from "../../../utils/ApiCall";
 import "./DeleteTodo.css";
-import PropTypes from "prop-types";
+
+import Loader from "../../Loader/Loader";
 
 export default function DeleteTodo({
   todoID,

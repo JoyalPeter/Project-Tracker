@@ -1,8 +1,11 @@
-import { Button, Dialog, DialogActions, DialogTitle } from "@mui/material/";
-import { useNavigate } from "react-router-dom";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
 import PropTypes from "prop-types";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import DialogContent from "@mui/material/DialogContent";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContentText from "@mui/material/DialogContentText";
+import { useNavigate } from "react-router-dom";
 
 export default function Logout({ open, setOpen }) {
   const navigate = useNavigate();

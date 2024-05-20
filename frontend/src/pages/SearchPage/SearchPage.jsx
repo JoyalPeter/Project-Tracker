@@ -1,14 +1,17 @@
-import { Button, TextField, Box } from "@mui/material";
-import { useState } from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import makeApiCall from "../../utils/ApiCall";
-import Loader from "../../components/Loader/Loader";
+import TextField from "@mui/material/TextField";
+import SearchIcon from "@mui/icons-material/Search";
+import { useState } from "react";
 import { toast } from "react-toastify";
 import { Api_Methods, ToasterMessages } from "../../utils/Constants";
-import NavBar from "../../components/NavBar/NavBar";
-import ProjectComponent from "../../components/Projects/ProjectComponent/ProjectComponent";
-import SearchIcon from "@mui/icons-material/Search";
 import "./SearchPage.css";
+
 import Empty from "../../components/Empty/Empty";
+import NavBar from "../../components/NavBar/NavBar";
+import Loader from "../../components/Loader/Loader";
+import ProjectComponent from "../../components/Projects/ProjectComponent/ProjectComponent";
 
 export default function SearchPage() {
   const [loading, setLoading] = useState(false);

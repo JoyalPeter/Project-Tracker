@@ -1,5 +1,5 @@
-import { Project } from '../../projects/entities/project.entity';
 import { Status } from '../../../utils/Constants';
+import { Project } from '../../projects/entities/project.entity';
 import {
   Column,
   CreateDateColumn,

@@ -1,9 +1,11 @@
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
 import { useState } from "react";
-import CreateProject from "../../components/Projects/CreateProject/CreateProject";
-import NavBar from "../../components/NavBar/NavBar";
 import { useNavigate } from "react-router-dom";
-import { Paper, Typography } from "@mui/material";
 import './HomePage.css'
+
+import NavBar from "../../components/NavBar/NavBar";
+import CreateProject from "../../components/Projects/CreateProject/CreateProject";
 
 export default function HomePage() {
   const [open,setOpen]=useState(false)

@@ -1,13 +1,16 @@
-import { Box, IconButton, Typography } from "@mui/material";
+import PropTypes from "prop-types";
+import Box from "@mui/material/Box";
+import TableRow from "@mui/material/TableRow";
+import EditIcon from "@mui/icons-material/Edit";
+import TableCell from "@mui/material/TableCell";
+import Typography from "@mui/material/Typography";
+import IconButton from "@mui/material/IconButton";
+import DeleteIcon from "@mui/icons-material/Delete";
 import { useState } from "react";
+import { Status } from "../../../utils/Constants";
+
 import EditTodo from "../EditTodo/EditTodo";
 import DeleteTodo from "../DeleteTodo/DeleteTodo";
-import DeleteIcon from "@mui/icons-material/Delete";
-import EditIcon from "@mui/icons-material/Edit";
-import { Status } from "../../../utils/Constants";
-import TableCell from "@mui/material/TableCell";
-import TableRow from "@mui/material/TableRow";
-import PropTypes from "prop-types";
 
 export default function TodoComponent({ todo, updated, setUpdated }) {
   const [openEditModal, setOpenEditModal] = useState(false);

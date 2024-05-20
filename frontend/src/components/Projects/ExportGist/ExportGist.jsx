@@ -1,18 +1,20 @@
-import { MarkDownSkeleton, Status } from "../../../utils/Constants";
-import { saveAs } from "file-saver";
-import {
-  Button,
-  DialogContentText,
-  Dialog,
-  DialogTitle,
-  DialogActions,
-  DialogContent,
-} from "@mui/material";
-import Loader from "../../Loader/Loader";
-import { toast } from "react-toastify";
-import { ToasterMessages } from "../../../utils/Constants";
-import { useState } from "react";
 import PropTypes from "prop-types";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import { saveAs } from "file-saver";
+import { toast } from "react-toastify";
+import { useState } from "react";
+import {
+  ToasterMessages,
+  MarkDownSkeleton,
+  Status,
+} from "../../../utils/Constants";
+
+import Loader from "../../Loader/Loader";
 
 export default function ExportGist({ projectTitle, todos, open, setOpen }) {
   const [loading, setLoading] = useState(false);

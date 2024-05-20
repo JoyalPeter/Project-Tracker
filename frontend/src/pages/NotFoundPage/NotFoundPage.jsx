@@ -1,12 +1,14 @@
-import { Box, Typography, Button } from "@mui/material";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
-import "./NotFoundPage.css"; 
+import "./NotFoundPage.css";
 
 export default function NotFoundPage() {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
-    navigate(-1); 
+    navigate(-1);
   };
 
   return (
@@ -29,9 +31,9 @@ export default function NotFoundPage() {
         className="not-found-description"
         gutterBottom
       >
-        The page you are trying to open does not exist. You may have mistyped the
-        address, or the page might have been removed, had its name changed, or
-        is temporarily unavailable.
+        The page you are trying to open does not exist. You may have mistyped
+        the address, or the page might have been removed, had its name changed,
+        or is temporarily unavailable.
       </Typography>
       <Button
         variant="contained"
