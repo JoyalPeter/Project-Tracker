@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import Box from "@mui/material/Box";
+import Tooltip from "@mui/material/Tooltip";
 import TableRow from "@mui/material/TableRow";
 import EditIcon from "@mui/icons-material/Edit";
 import TableCell from "@mui/material/TableCell";
@@ -63,24 +64,28 @@ export default function TodoComponent({ todo, updated, setUpdated }) {
         </TableCell>
         <TableCell align="center">
           <Box sx={{ gap: "1%" }}>
-            <IconButton
-              color="inherit"
-              data-testid="test-todo-component-row-edit-btn"
-              onClick={() => {
-                setOpenEditModal(true);
-              }}
-            >
-              <EditIcon />
-            </IconButton>
-            <IconButton
-              color="inherit"
-              data-testid="test-todo-component-row-delete-btn"
-              onClick={() => {
-                setOpenDeleteModal(true);
-              }}
-            >
-              <DeleteIcon />
-            </IconButton>
+            <Tooltip title="Edit">
+              <IconButton
+                color="inherit"
+                data-testid="test-todo-component-row-edit-btn"
+                onClick={() => {
+                  setOpenEditModal(true);
+                }}
+              >
+                <EditIcon />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="Delete">
+              <IconButton
+                color="inherit"
+                data-testid="test-todo-component-row-delete-btn"
+                onClick={() => {
+                  setOpenDeleteModal(true);
+                }}
+              >
+                <DeleteIcon />
+              </IconButton>
+            </Tooltip>
           </Box>
           <EditTodo
             open={openEditModal}
