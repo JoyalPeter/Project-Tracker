@@ -29,37 +29,37 @@ export function ColorTheme({ children }) {
                   main: "#303c6c",
                 },
                 accent: {
-                  main: "#b4dfe5", 
+                  main: "#b4dfe5",
                 },
                 background: {
                   default: "#fbe8a6",
-                  paper: "#d2fdff", 
+                  paper: "#d2fdff",
                 },
                 text: {
-                  primary: "#303c6c", 
+                  primary: "#303c6c",
                   secondary: "#b4dfe5",
                 },
-                divider: "#b4dfe5", 
+                divider: "#b4dfe5",
               }
             : {
                 primary: {
-                  main: "#00a6fb", 
+                  main: "#00a6fb",
                 },
                 secondary: {
-                  main: "#0582ca", 
+                  main: "#0582ca",
                 },
                 accent: {
-                  main: "#006494", 
+                  main: "#006494",
                 },
                 background: {
-                  default: "#051923", 
-                  paper: "#003554", 
+                  default: "#051923",
+                  paper: "#003554",
                 },
                 text: {
-                  primary: "#ced4da", 
-                  secondary: "#90aead", 
+                  primary: "#ced4da",
+                  secondary: "#90aead",
                 },
-                divider: "#ced4da", 
+                divider: "#ced4da",
               }),
         },
       }),
@@ -73,4 +73,4 @@ export function ColorTheme({ children }) {
   );
 }
 
-ColorTheme.propTypes = { children: PropTypes.element };
+ColorTheme.propTypes = { children: PropTypes.array };

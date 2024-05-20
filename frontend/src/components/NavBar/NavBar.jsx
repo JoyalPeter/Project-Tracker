@@ -1,18 +1,20 @@
 import Box from "@mui/material/Box";
-import Logout from "../Logout/Logout";
 import AppBar from "@mui/material/AppBar";
 import Button from "@mui/material/Button";
 import Toolbar from "@mui/material/Toolbar";
+import Tooltip from "@mui/material/Tooltip";
 import HomeIcon from "@mui/icons-material/Home";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import LogoutIcon from "@mui/icons-material/Logout";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
-import { Tooltip, useTheme } from "@mui/material";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTheme } from "@mui/material/styles";
 import { ColorModeContext } from "../../utils/ColorTheme";
+
+import Logout from "../Logout/Logout";
 
 export default function NavBar() {
   const navigate = useNavigate();
@@ -68,7 +70,6 @@ export default function NavBar() {
           </Toolbar>
         </AppBar>
       </Box>
-
       <Logout open={openLogout} setOpen={setOpenLogout} />
     </>
   );
