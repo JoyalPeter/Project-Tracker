@@ -38,6 +38,8 @@ export default function SignIn() {
         localStorage.setItem("jwtToken", response.access_token);
         const payload = jwtDecode(response.access_token);
         localStorage.setItem("userID", payload.userID);
+        localStorage.setItem("username", payload.username);
+        localStorage.setItem("token_timestamp", new Date());
         navigate("/");
       });
     } catch (error) {
