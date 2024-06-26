@@ -56,7 +56,7 @@ export default function NavBar() {
               component="div"
               sx={{ flexGrow: 1 }}
             >
-              Take Home Challenge
+              Project Tracker
             </Typography>
             <Tooltip title="Change mode">
               <IconButton
