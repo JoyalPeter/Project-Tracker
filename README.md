@@ -1,8 +1,8 @@
-# Take Home Challenge
+# Project Tracker
 
 ## Description
 
-This project is a web application built with React and Material-UI for the frontend and Node.js for the backend. It uses mysql as database It provides features such as user authentication, project management, task management, and the ability to export project data as GitHub secret gists.
+This project is a web application built with React and Material-UI for the frontend and Node.js for the backend. It uses MySQL as database. It provides features such as user authentication, project management, task management, and the ability to export project data as GitHub secret gists.
 
 ## Setup
 
