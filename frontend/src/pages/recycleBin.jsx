@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
-import { useEffect, useState, useParams } from "react";
-import makeApiCall from "../../utils/ApiCall";
-import { Api_Methods, ToasterMessages } from "../../utils/Constants";
+import { useParams, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import makeApiCall from "../utils/ApiCall";
+import { Api_Methods, ToasterMessages } from "../utils/Constants";
 import { toast } from "react-toastify";
-import Empty from "../../components/Empty/Empty";
-import TodoComponent from "../../components/Todos/TodoComponent/TodoComponent";
+import Empty from "../components/Empty/Empty";
+import TodoComponent from "../components/Todos/TodoComponent/TodoComponent";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableHead from "@mui/material/TableHead";
@@ -14,11 +15,12 @@ import Typography from "@mui/material/Typography";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
-export default function RecycleBin({ updated, setUpdated }) {
+export default function RecycleBin() {
   const { projectID } = useParams();
   const [todos, setTodos] = useState([]);
   const [loading, setLoading] = useState(false);
   const [createdAt, setCreatedAt] = useState("");
+  const [updated, setUpdated] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
@@ -116,7 +118,3 @@ export default function RecycleBin({ updated, setUpdated }) {
     </>
   );
 }
-RecycleBin.propTypes = {
-  updated: PropTypes.bool.isRequired,
-  setUpdated: PropTypes.func.isRequired,
-};

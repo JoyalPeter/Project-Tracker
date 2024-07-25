@@ -16,7 +16,7 @@ import TableContainer from "@mui/material/TableContainer";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import { toast } from "react-toastify";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams,useNavigate } from "react-router-dom";
 import { Api_Methods, ToasterMessages } from "../../utils/Constants";
 import "./ProjectPage.css";
 
@@ -70,7 +70,7 @@ export default function ProjectPage() {
   }, [updated]);
 
   function recycleBin(){
-    navigate('/recycleBin')
+    navigate(`/projects/${projectID}/recycleBin`);
   }
 
   return (
