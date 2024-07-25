@@ -30,6 +30,7 @@ import TodoComponent from "../../components/Todos/TodoComponent/TodoComponent";
 
 export default function ProjectPage() {
   const { projectID } = useParams();
+  const navigate=useNavigate()
   const [todos, setTodos] = useState([]);
   const [projectTitle, setProjectTitle] = useState("");
   const [createdAt, setCreatedAt] = useState("");
@@ -67,6 +68,10 @@ export default function ProjectPage() {
     }
     fetchData();
   }, [updated]);
+
+  function recycleBin(){
+    navigate('/recycleBin')
+  }
 
   return (
     <>
@@ -126,7 +131,7 @@ export default function ProjectPage() {
               </Button>
             )}
           </Box>
-
+            <Button onClick={recycleBin}>Recycle Bin</Button>
           <Box>
             {!loading && (
               <>
@@ -173,14 +178,17 @@ export default function ProjectPage() {
                         </TableRow>
                       </TableHead>
                       <TableBody>
-                        {todos.map((todo) => (
-                          <TodoComponent
-                            key={todo.todoID}
-                            todo={todo}
-                            updated={updated}
-                            setUpdated={setUpdated}
-                          />
-                        ))}
+                        {todos.map((todo) => {
+                          if(todo.deleted===false){
+                            return <TodoComponent
+                              key={todo.todoID}
+                              todo={todo}
+                              updated={updated}
+                              setUpdated={setUpdated}
+                            />
+                          }
+                        }
+                        )}
                       </TableBody>
                     </Table>
                   </TableContainer>

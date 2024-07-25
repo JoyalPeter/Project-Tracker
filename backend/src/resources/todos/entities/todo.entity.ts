@@ -21,6 +21,9 @@ export class Todo {
   @Column()
   status: Status;
 
+  @Column()
+  deleted: boolean;
+
   @CreateDateColumn()
   createdDate: Date;
 

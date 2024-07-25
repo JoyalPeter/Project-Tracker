@@ -28,7 +28,9 @@ export default function DeleteTodo({
     try {
       setLoading(true);
       handleClose();
-      await makeApiCall(`/todos/${todoID}`, Api_Methods.DELETE).then((_) => {
+      await makeApiCall(`/todos/${todoID}`, Api_Methods.PATCH, {
+        deleted: true,
+      }).then((_) => {
         toast.success(ToasterMessages.DELETE_TODO_SUCCESS);
         setUpdated(!updated);
       });
@@ -53,7 +55,7 @@ export default function DeleteTodo({
             variant="h6"
             component="h2"
           >
-            Do you want to delete this todo?
+            Do you want to move this todo to recycle bin?
           </Typography>
           <Box className="delete-todo-modal-buttons">
             <Button

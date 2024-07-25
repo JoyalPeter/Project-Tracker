@@ -6,6 +6,7 @@ import { ColorTheme } from "./utils/ColorTheme";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Loader from "./components/Loader/Loader";
+import RecycleBin from "./pages/recycleBin";
 const SignIn = lazy(() => import("./pages/SignIn/SignIn"));
 const SignUp = lazy(() => import("./pages/SignUp/SignUp"));
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
@@ -30,6 +31,7 @@ function App() {
                 <Route path="/" Component={HomePage} />
                 <Route path="/projects/all" Component={AllProjectsPage} />
                 <Route path="/projects/:projectID" Component={ProjectPage} />
+                <Route path="/projects/:projectID/recycleBin" Component={RecycleBin} />
                 <Route path="/projects/search" Component={SearchPage} />
               </Route>
               <Route path="*" Component={NotFoundPage} />
